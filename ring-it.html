@@ -2,6 +2,19 @@
 
 <head>
   <title>Ring It</title>
+  <style type="text/css">
+  button {
+    font-size: 16px;
+    background-color: #4c9d2f;
+    background: linear-gradient( #55b135, #397623);
+    border-radius: 4px;
+    display: block;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+    border: 1px solid #397623;
+    color: white;
+  }
+  </style>
 </head>
 
 <audio id="bell-1" preload="auto">
@@ -17,10 +30,14 @@
  <source src="https://dl.dropboxusercontent.com/u/15344/ring-my-bell-4.mp3">
 </audio>
 
-<button onclick="ringIt(1)">Ring It Funky</button>
-<button onclick="ringIt(2)">Ding Dong Ding</button>
-<button onclick="ringIt(3)">Ring It Ring It Ahhhh</button>
-<button onclick="ringIt(4)">Ring My Bell</button>
+<img src="images/ringthebell.gif">
+
+<div id="bells">
+  <button onclick="ringIt(1)">Ring It Funky</button>
+  <button onclick="ringIt(2)">Ding Dong Ding</button>
+  <button onclick="ringIt(3)">Ring It Ring It Ahhhh</button>
+  <button onclick="ringIt(4)">Ring My Bell</button>
+</div>
 
 <script type="text/javascript">
 
