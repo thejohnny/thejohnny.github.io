@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>Ring It</title>
+</head>
+
+<audio id="bell-1" preload="auto">
+ <source src="https://dl.dropboxusercontent.com/u/15344/ring-my-bell-1.mp3">
+</audio>
+<audio id="bell-2" preload="auto">
+ <source src="https://dl.dropboxusercontent.com/u/15344/ring-my-bell-2.mp3">
+</audio>
+<audio id="bell-3" preload="auto">
+ <source src="https://dl.dropboxusercontent.com/u/15344/ring-my-bell-3.mp3">
+</audio>
+<audio id="bell-4" preload="auto">
+ <source src="https://dl.dropboxusercontent.com/u/15344/ring-my-bell-4.mp3">
+</audio>
+
+<button onclick="ringIt(1)">Ring It Funky</button>
+<button onclick="ringIt(2)">Ding Dong Ding</button>
+<button onclick="ringIt(3)">Ring It Ring It Ahhhh</button>
+<button onclick="ringIt(4)">Ring My Bell</button>
+
+<script type="text/javascript">
+
+  function ringIt(bellNum) {
+    var bells = document.getElementsByTagName("audio");
+
+    for (var i = 0; i < bells.length; i++) {
+      bells[i].pause();
+      bells[i].currentTime = 0;
+    }
+    document.getElementById("bell-" + bellNum).play();
+  }
+</script>
+
+</html>
